@@ -1,4 +1,7 @@
 ﻿namespace FSharpModLibrary
 
-type Class1() = 
-    member this.X = "F#"
+open Verse
+
+[<StaticConstructorOnStartup>]
+type FSharpModStartupCtor() =
+    static do Log.Message "Hello from F#!"
